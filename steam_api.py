@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import urllib2
+import json
 
 
 class steam_api_connector():
@@ -18,4 +19,10 @@ class steam_api_connector():
         response = urllib2.urlopen("""
         http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=%s&steamid=%s&format=json
         """ % (self.steam_api_key, self.steam_api_id))
-        return response.read()
+        json_string = response.read()
+        return self.json_to_dictionary(json_string)['response']
+
+    def json_to_dictionary(self, json_string):
+        # json_string = json_string.read()
+        decoded_json = json.loads(json_string)
+        return decoded_json
