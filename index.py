@@ -3,6 +3,7 @@
 from cgi_header import print_cgi_header
 import steam_api
 
+
 def main():
     print_cgi_header()
 
