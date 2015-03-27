@@ -5,6 +5,7 @@ import json
 
 
 class steam_api_connector():
+    """Class for connecting and getting infromation from the steam api"""
 
     steam_api_key = ''
     steam_api_id = ''
@@ -26,3 +27,6 @@ class steam_api_connector():
         # json_string = json_string.read()
         decoded_json = json.loads(json_string)
         return decoded_json
+
+    def get_gamename(self, appid):
+        pass
