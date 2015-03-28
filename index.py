@@ -36,6 +36,7 @@ def print_all_games(games_dict):
     for game in games_dict:
         print '<TR>'
         print '<TD>Appid: %s</TD>' % game['appid']
+        print '<TD>Game Name: %s</TD>' % game['name']
         print '<TD>Playtime: %s</TD>' % game['playtime_forever']
         print '</TR>'
 
