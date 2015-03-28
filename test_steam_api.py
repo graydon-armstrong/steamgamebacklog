@@ -11,7 +11,19 @@ class test_steam_api(unittest.TestCase):
         self.steam_api_connection = steam_api.steam_api_connector()
 
     def test_set_api_key(self):
-        self.assertEqual('', self.steam_api_connection.steam_api_key)
+        """Test that the api key can be set"""
+        self.steam_api_connection.set_steam_api_key('123aas')
+        self.assertEqual('123aas', self.steam_api_connection.steam_api_key)
+
+    def test_set_api_id(self):
+        """Test that the api id can be set"""
+        self.steam_api_connection.set_steam_api_id('12333')
+        self.assertEqual('12333', self.steam_api_connection.steam_api_id)
+
+    def test_get_game_name(self):
+        """Test that you get back a game name"""
+        self.assertEqual('Half-Life 2',
+                         self.steam_api_connection.get_game_name('220'))
 
 if __name__ == '__main__':
     unittest.main()
