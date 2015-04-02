@@ -34,6 +34,7 @@ def print_top_played_games(games_dict):
 def print_all_games(games_dict):
     print '<TABLE>'
     for game in games_dict:
+        game['name'] = game['name'].encode('ascii', 'ignore')
         print '<TR>'
         print '<TD>Appid: %s</TD>' % game['appid']
         print '<TD>Game Name: %s</TD>' % game['name']
