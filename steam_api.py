@@ -29,6 +29,3 @@ class steam_api_connector():
         # json_string = json_string.read()
         decoded_json = json.loads(json_string)
         return decoded_json
-
-    def get_game_name(self, appid):
-        pass
