@@ -3,14 +3,14 @@
 import steam_api
 
 
-class steam_games_dict():
+class SteamGamesDict:
     """A class for storing a dictionary of a users steam games"""
 
     games_dict = {}
     games_count = None
 
     def __init__(self, key, steam_id):
-        steam_api_connection = steam_api.steam_api_connector()
+        steam_api_connection = steam_api.SteamApiConnector()
         steam_api_connection.set_steam_api_key(key)
         steam_api_connection.set_steam_api_id(steam_id)
 
@@ -36,14 +36,15 @@ class steam_games_dict():
     def print_all_games(self):
         self.print_games_dict(self.games_dict)
 
-    def print_games_dict(self, the_games_dictionary):
-        print '<TABLE>'
+    @staticmethod
+    def print_games_dict(the_games_dictionary):
+        print('<TABLE>')
         for game in the_games_dictionary:
             game['name'] = game['name'].encode('ascii', 'ignore')
-            print '<TR>'
-            print '<TD>Appid: %s</TD>' % game['appid']
-            print '<TD>Game Name: %s</TD>' % game['name']
-            print '<TD>Playtime: %s</TD>' % game['playtime_forever']
-            print '</TR>'
+            print('<TR>')
+            print('<TD>Appid: %s</TD>' % game['appid'])
+            print('<TD>Game Name: %s</TD>' % game['name'])
+            print('<TD>Playtime: %s</TD>' % game['playtime_forever'])
+            print('</TR>')
 
-        print '</TABLE>'
+        print('</TABLE>')
