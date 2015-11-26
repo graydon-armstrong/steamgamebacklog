@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import unittest
-import steam_api
+from python import steam_api
 
 
 class TestSteamApi(unittest.TestCase):

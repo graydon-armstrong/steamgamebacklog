@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import unittest
-from steamgamesdict import SteamGamesDict
+from python.steamgamesdict import SteamGamesDict
 
 
 class TestSteamGamesDict(unittest.TestCase):
