@@ -10,7 +10,7 @@ class TestSteamGamesDict(unittest.TestCase):
     def setUp(self):
         key = 'AF4B3CC7FBF9CD34127CE10E6CCA9B62'
         steam_id = '76561197989244442'
-        self.steam_games_dict = SteamGamesDict(key, steam_id)
+        self.steam_games_dict = SteamGamesDict(steam_id, key)
 
     def test_get_number_of_games(self):
         """Test getting the amount of games owned by a user"""

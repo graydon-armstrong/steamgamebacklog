@@ -9,7 +9,7 @@ class SteamGamesDict:
     games_dict = {}
     games_count = None
 
-    def __init__(self, key, steam_id):
+    def __init__(self, steam_id, key='AF4B3CC7FBF9CD34127CE10E6CCA9B62'):
         steam_api_connection = steam_api.SteamApiConnector()
         steam_api_connection.set_steam_api_key(key)
         steam_api_connection.set_steam_api_id(steam_id)
