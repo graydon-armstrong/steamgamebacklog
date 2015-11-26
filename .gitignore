@@ -1,2 +1,5 @@
 #Python files
 *.pyc
+
+#Ignore Pycharm idea directory
+.idea/
