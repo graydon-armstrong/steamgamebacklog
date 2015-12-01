@@ -5,12 +5,7 @@ from python.pagesetup import *
 
 
 def main():
-    print_cgi_header()
-    print_html_start_tag()
-    print_head("TESTING 123")
-
-    print('<h1>Steam Game Backlog</h1>')
-    print('<h2>Get Owned Games</h2>')
+    setup_page()
 
     steam_id = '76561197989244442'
 
