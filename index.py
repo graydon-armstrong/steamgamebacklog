@@ -16,7 +16,7 @@ def main():
 
     steam_games.print_all_games()
 
-    print_html_end_tag()
+    close_page_tags()
 
 if __name__ == '__main__':
     main()
