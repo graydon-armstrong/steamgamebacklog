@@ -39,12 +39,13 @@ class SteamGamesDict:
     @staticmethod
     def print_games_dict(the_games_dictionary):
         print('<TABLE>')
+        print """<tr><th>App ID</th><th>Game Name</th><th>Minutes Played</th></tr>"""
         for game in the_games_dictionary:
             game['name'] = game['name'].encode('ascii', 'ignore')
             print('<TR>')
-            print('<TD>Appid: %s</TD>' % game['appid'])
-            print('<TD>Game Name: %s</TD>' % game['name'])
-            print('<TD>Playtime: %s</TD>' % game['playtime_forever'])
+            print('<TD>%s</TD>' % game['appid'])
+            print('<TD>%s</TD>' % game['name'])
+            print('<TD>%s</TD>' % game['playtime_forever'])
             print('</TR>')
 
         print('</TABLE>')
