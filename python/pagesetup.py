@@ -17,6 +17,8 @@ def print_head(title=""):
         <meta name="description" content="Manage your Steam game backlog">
         <meta name="keywords" content="Steam,PC,Backlog,Games">
         <meta name="author" content="Graydon Armstrong">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>%s</title>
     </head>
     """ % title
