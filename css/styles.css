@@ -1,0 +1,58 @@
+/*  This makes sure that the padding and border are included in the total width and height of the elements */
+* {
+    box-sizing: border-box;
+}
+
+/* CSS classes for setting up the 12 part grid system */
+
+/* For Mobile, elements should span the whole screen */
+[class*="col-"] {
+    width: 100%;
+}
+
+/* For tablets: */
+@media only screen and (min-width: 600px) {
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+
+/* For Desktop */
+@media only screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+/* All the grid columns should float to the left and have a padding */
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+/* The columns inside a row are all floating to the left, and are therefore taken out of the flow of the page,
+   and other elements will be placed as if the columns does not exist.To prevent this, we will add a style that
+   clears the flow */
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
